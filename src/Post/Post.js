@@ -1,20 +1,16 @@
 import "./post.css";
-import { React, axios, useContext } from "react";
 import Avatar from "./Avatar.jpg";
 import Image from "./Image (1).jpg";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/footer";
-import {DarkMode} from "../Theme/theme"
-
 
 function Post() {
-  const { ToggleSwitch, darkMode } = useContext(DarkMode);
   return (
-    <div className={`App ${darkMode && "grey"}`}>
+    <div className="App">
       <div className="second">
         <div className="Heading">
-          <h1 style={{color : darkMode && "white"}}>10 Secrets for managing a remote team </h1>
+          <h1>10 Secrets for managing a remote team </h1>
         </div>
         <div className="creater">
           <div className="sec">
@@ -22,11 +18,11 @@ function Post() {
               <img src={Avatar} />
             </div>
             <div className="p">
-              <p style={{color : darkMode && "white"}}>Shedrack eze</p>
+              <p>Shedrack eze</p>
             </div>
             <div className="border"></div>
             <div className="date">
-              <p style={{color : darkMode && "white"}}>2nd January,2022</p>
+              <p>2nd January,2022</p>
             </div>
           </div>
         </div>
@@ -70,13 +66,13 @@ function Post() {
             <img src={Avatar} />
             <div className="end3-1">
               <div className="write">
-                <p style={{color : darkMode && "white"}}>Written By</p>
+                <p>Written By</p>
               </div>
               <div className="Name">
-                <p style={{color : darkMode && "white"}}>Shedrack Eze</p>
+                <p>Shedrack Eze</p>
               </div>
               <div className="Team">
-                <p style={{color : darkMode && "white"}}>CEO Team App</p>
+                <p>CEO Team App</p>
               </div>
             </div>
           </div>
@@ -92,6 +88,7 @@ function Post() {
           </div>
           <div className="comment">
             <div>
+              {" "}
               <img src={Avatar} />
             </div>
             <input type="text" placeholder="comments" />
@@ -113,7 +110,6 @@ function Logo() {
 export default Post;
 
 function Title(props) {
-  const { ToggleSwitch, darkMode } = useContext(DarkMode);
   const { text } = props;
-  return <div className="titel"  style={{color : darkMode && "white"}} >{text}</div>;
+  return <div className="titel">{text}</div>;
 }

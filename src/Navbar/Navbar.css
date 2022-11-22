@@ -44,19 +44,18 @@
 .nv-text:hover {
   transform: translateY(-5px);
   font-size: 23px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius:10px ;
-  transition: 700ms;
-  background-color:rgba(77, 160, 253, 1);
-  color:darkblue;
+  border: 1px solid gray;
+  border-radius: 10px;
+  transition: 500ms;
+  color: rgba(77, 160, 253, 1);
 }
 .navbar-right {
-  width: 50%;
+  width: 35%;
   height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  transition: font-size 5s;
+  transition: font-size 2s;
 }
 .nv-text {
   font-weight: 700;

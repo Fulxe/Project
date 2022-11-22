@@ -1,16 +1,14 @@
 import "./Second.css";
 import avatar from "./Avatar.jpg";
 import cover from "./Image.jpg";
-import {React , useContext} from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { DarkMode } from "../Theme/theme";
 
 export function Second(props) {
-  const { ToggleSwitch, darkMode } = useContext(DarkMode);
   let navigate = useNavigate();
   const { text, heading, image, name , avatar , id} = props;
   return (
-      <div className="second21" style={{background: darkMode && "white"}}>
+    <div className="second21">
       <img className="zurag" src={image} onClick={()=>navigate(`blog/${id}`)  } />
       <div className="garchig">
         <p>{heading}</p>
